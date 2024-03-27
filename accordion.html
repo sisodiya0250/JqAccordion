@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Jquery-Accordion</title>
+</head>
+<body>
+
+    <main>
+
+        <div class="accord">
+            <div class="heading">
+                <h2 class="quest">Question1</h2>
+                <span class="icons add">+</span>
+                <span class="icons less">-</span>
+                <!-- <i class="fa-solid fa-plus icons"></i> -->
+                <!-- <i class="fa-solid fa-minus less"></i> -->
+            </div>
+            <div class="content">
+                <p>This is content1. related to the question first.</p>
+            </div>
+        </div>
+
+        
+        <div class="accord">
+            <div class="heading">
+                <h2 class="quest">Question2</h2>
+                <span class="icons add">+</span>
+                <span class="icons less">-</span>
+                <!-- <i class="fa-solid fa-plus icons"></i> -->
+                <!-- <i class="fa-solid fa-minus less"></i> -->
+            </div>
+            <div class="content">
+                <p>This is content2. related to the question Second.</p>
+            </div>
+        </div>
+
+        
+        <div class="accord">
+            <div class="heading">
+                <h2 class="quest">Question3</h2>
+                <!-- <i class="fa-solid fa-plus icons"></i> -->
+                <!-- <i class="fa-solid fa-minus less"></i> -->
+                <span class="icons add">+</span>
+                <span class="icons less">-</span>
+            </div>
+            <div class="content">
+                <p>This is content3. related to the question Third.</p>
+            </div>
+        </div>
+
+        
+        <div class="accord">
+            <div class="heading">
+                <h2 class="quest">Question4</h2>
+                <span class="icons add">+</span>
+                <span class="icons less">-</span>
+                <!-- <i class="fa-solid fa-plus icons"></i> -->
+                <!-- <i class="fa-solid fa-minus less"></i> -->
+            </div>
+            <div class="content">
+                <p>This is content4. related to the question Fourth.</p>
+            </div>
+        </div>
+
+    </main>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+
+    
+    $('.heading').click(function(){
+    $(this).next().slideToggle().css('color','maroon');
+    $(this).find('.icons').toggle();
+    $(this).parent().siblings().find('.content').slideUp();
+    $(this).parent().siblings().find('.add').show();
+    $(this).parent().siblings().find('.less').hide();
+
+    });
+
+
+</script>
+</html>
